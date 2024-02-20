@@ -1,0 +1,137 @@
+# Default values for lp-app frontend microservice
+
+nodeSelector:
+  kubernetes.io/os: linux
+  
+serviceAccount:
+  create: true
+  name: "lp-app"
+  automountServiceAccountToken: false
+
+service:
+  enabled: true
+  port: 443
+  enableHttps: true
+
+deployment:
+  containerPort: 8090
+  configChecksum: true
+  volumeMounts:
+    - mountPath: /tmp
+      name: tmp         
+  volumes:
+    - name: tmp
+      emptyDir: 
+        sizeLimit: 100Mi        
+  securityContext:      
+      runAsNonRoot: true
+      fsGroup: 2000   
+  restartPolicy: Always
+  imagePullPolicy: Always
+  terminationGracePeriodSeconds: 30
+  serviceAccountName: lp-app
+  serviceAccount: lp-app
+  hostNetwork: false
+  hostPID: false
+  hostIPC: false
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+  revisionHistoryLimit: 2
+  progressDeadlineSeconds: 600
+  containers:
+    securityContext:
+      runAsUser: 1001
+      allowPrivilegeEscalation: false
+      readOnlyRootFilesystem: true
+      runAsGroup: 3000
+      capabilities:
+        drop:
+           - ALL
+  lifecycle:
+        postStart:
+              exec:
+                command: ["/bin/sh", "-c", 'cp -R /lpapp/ /tmp/ 
+                          && 
+                          cat /lpapp/html/assets/config.json | 
+                          sed -e "s#\$LeasepointMasterDataApiBaseUrl#$masterdataapi#g" 
+                              -e "s#\$LeasepointIAMApiBaseUrl#$iamapi#g" 
+                              -e "s#\$LeasepointGridsApiBaseUrl#$gridsapi#g" 
+                              -e "s#\$LeasepointCoreApiBaseUrl#$coreapi#g" 
+                              -e "s#\$LeasepointLoggerApiBaseUrl#$logsapi#g" > /tmp/lpapp/html/assets/config.json' ] 
+
+ingress:
+  enabled: true
+  className: ""
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: "true"
+
+    #Max body size
+    nginx.ingress.kubernetes.io/proxy-body-size: 128m
+    nginx.org/client-max-body-size: 50m
+
+    #Timeout
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-next-upstream-timeout: "600"
+
+    #SSLconfig
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true" 
+    nginx.ingress.kubernetes.io/ssl-prefer-server-ciphers: "true"
+    
+    #Ratelimit
+    nginx.ingress.kubernetes.io/limit-burst-multiplier: "10"
+    nginx.ingress.kubernetes.io/limit-connections: "50"
+    nginx.ingress.kubernetes.io/limit-rpm: "300"
+    nginx.ingress.kubernetes.io/limit-rps: "45"
+   
+   #Perfannotaions
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/session-cookie-name: "LPINGRESSCOOKIE"
+    nginx.ingress.kubernetes.io/session-cookie-expires: "1800"
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "1800"
+    nginx.ingress.kubernetes.io/affinity-mode: "persistent"
+    nginx.ingress.kubernetes.io/session-cookie-samesite: "Strict"
+    nginx.ingress.kubernetes.io/session-cookie-conditional-samesite-none: "true"
+
+resources:
+  requests:
+    memory: "500Mi"
+    cpu: "100m"
+  limits:
+    memory: "750Mi"
+    cpu: "300m"
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 8
+  targetCPUUtilizationPercentage: 65
+  targetMemoryUtilizationPercentage: 75
+
+probes:
+  enabled: true
+  livenessProbe:
+    httpGet:
+      path: /healthz
+      port: 8090
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    timeoutSeconds: 1
+    successThreshold: 1
+    failureThreshold: 5
+  readinessProbe:
+    httpGet:
+      path: /readyz
+      port: 8090
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    timeoutSeconds: 1
+    successThreshold: 1
+    failureThreshold: 5
+  terminationMessagePath: /dev/termination-log
+  terminationMessagePolicy: File

@@ -1,0 +1,24 @@
+**/provider.tf
+terraform.tfvars
+**.terraform
+**/.terraform
+**/.terraform.lock.hcl
+**/.terraform.lock.hcl
+# Local Terraform state files
+**/*.tfstate
+**/*.tfstate.backup
+
+**/terraform.log
+
+# Terraform plan output
+**/terraform.plan
+
+# Ignore any override files as they are usually used to override default Terraform settings
+**/override.tf
+**/override.tf.json
+**/*_override.tf
+**/*_override.tf.json
+
+# Ignore the crash log directory
+**/crash.log
+

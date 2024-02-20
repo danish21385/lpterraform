@@ -1,0 +1,1837 @@
+{
+  "version": 4,
+  "terraform_version": "1.6.6",
+  "serial": 553,
+  "lineage": "90a81294-27f3-11ce-2803-1130560e387a",
+  "outputs": {
+    "Datastorage_account_name": {
+      "value": "satrndata",
+      "type": "string"
+    },
+    "Logsstorage_account_name": {
+      "value": "satrnlogs",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "mode": "data",
+      "type": "azurerm_storage_account",
+      "name": "aksdata",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "access_tier": "Hot",
+            "account_kind": "StorageV2",
+            "account_replication_type": "LRS",
+            "account_tier": "Standard",
+            "allow_nested_items_to_be_public": false,
+            "azure_files_authentication": [],
+            "custom_domain": [],
+            "enable_https_traffic_only": true,
+            "id": "/subscriptions/5e4a3342-b14d-4056-a5e4-5d6d42b997ae/resourceGroups/rg-platform-dev-nu/providers/Microsoft.Storage/storageAccounts/satrndata",
+            "identity": [],
+            "infrastructure_encryption_enabled": false,
+            "is_hns_enabled": false,
+            "location": "northeurope",
+            "min_tls_version": "TLS1_2",
+            "name": "satrndata",
+            "nfsv3_enabled": false,
+            "primary_access_key": "jHdJQxDblPoMJHIioOq5pFAVB4dm100aYDSmcMw+p31dqZ9KzlQO22aynpMkqfdfm5M5rEKyuSKz+AStpScA2w==",
+            "primary_blob_connection_string": "DefaultEndpointsProtocol=https;BlobEndpoint=https://satrndata.blob.core.windows.net/;AccountName=satrndata;AccountKey=jHdJQxDblPoMJHIioOq5pFAVB4dm100aYDSmcMw+p31dqZ9KzlQO22aynpMkqfdfm5M5rEKyuSKz+AStpScA2w==",
+            "primary_blob_endpoint": "https://satrndata.blob.core.windows.net/",
+            "primary_blob_host": "satrndata.blob.core.windows.net",
+            "primary_blob_internet_endpoint": null,
+            "primary_blob_internet_host": null,
+            "primary_blob_microsoft_endpoint": null,
+            "primary_blob_microsoft_host": null,
+            "primary_connection_string": "DefaultEndpointsProtocol=https;AccountName=satrndata;AccountKey=jHdJQxDblPoMJHIioOq5pFAVB4dm100aYDSmcMw+p31dqZ9KzlQO22aynpMkqfdfm5M5rEKyuSKz+AStpScA2w==;EndpointSuffix=core.windows.net",
+            "primary_dfs_endpoint": "https://satrndata.dfs.core.windows.net/",
+            "primary_dfs_host": "satrndata.dfs.core.windows.net",
+            "primary_dfs_internet_endpoint": null,
+            "primary_dfs_internet_host": null,
+            "primary_dfs_microsoft_endpoint": null,
+            "primary_dfs_microsoft_host": null,
+            "primary_file_endpoint": "https://satrndata.file.core.windows.net/",
+            "primary_file_host": "satrndata.file.core.windows.net",
+            "primary_file_internet_endpoint": null,
+            "primary_file_internet_host": null,
+            "primary_file_microsoft_endpoint": null,
+            "primary_file_microsoft_host": null,
+            "primary_location": "northeurope",
+            "primary_queue_endpoint": "https://satrndata.queue.core.windows.net/",
+            "primary_queue_host": "satrndata.queue.core.windows.net",
+            "primary_queue_microsoft_endpoint": null,
+            "primary_queue_microsoft_host": null,
+            "primary_table_endpoint": "https://satrndata.table.core.windows.net/",
+            "primary_table_host": "satrndata.table.core.windows.net",
+            "primary_table_microsoft_endpoint": null,
+            "primary_table_microsoft_host": null,
+            "primary_web_endpoint": "https://satrndata.z16.web.core.windows.net/",
+            "primary_web_host": "satrndata.z16.web.core.windows.net",
+            "primary_web_internet_endpoint": null,
+            "primary_web_internet_host": null,
+            "primary_web_microsoft_endpoint": null,
+            "primary_web_microsoft_host": null,
+            "queue_encryption_key_type": "Service",
+            "resource_group_name": "rg-platform-dev-nu",
+            "secondary_access_key": "3iAaJ/kD7cEENtpaONNxoXYQOJMNZzm2IpeMjaqyJtoMrvGrR1uBHfMeCZXBuRqOdDY9FY6HT9np+AStADwuQQ==",
+            "secondary_blob_connection_string": "",
+            "secondary_blob_endpoint": null,
+            "secondary_blob_host": null,
+            "secondary_blob_internet_endpoint": null,
+            "secondary_blob_internet_host": null,
+            "secondary_blob_microsoft_endpoint": null,
+            "secondary_blob_microsoft_host": null,
+            "secondary_connection_string": "DefaultEndpointsProtocol=https;AccountName=satrndata;AccountKey=3iAaJ/kD7cEENtpaONNxoXYQOJMNZzm2IpeMjaqyJtoMrvGrR1uBHfMeCZXBuRqOdDY9FY6HT9np+AStADwuQQ==;EndpointSuffix=core.windows.net",
+            "secondary_dfs_endpoint": null,
+            "secondary_dfs_host": null,
+            "secondary_dfs_internet_endpoint": null,
+            "secondary_dfs_internet_host": null,
+            "secondary_dfs_microsoft_endpoint": null,
+            "secondary_dfs_microsoft_host": null,
+            "secondary_file_endpoint": null,
+            "secondary_file_host": null,
+            "secondary_file_internet_endpoint": null,
+            "secondary_file_internet_host": null,
+            "secondary_file_microsoft_endpoint": null,
+            "secondary_file_microsoft_host": null,
+            "secondary_location": "",
+            "secondary_queue_endpoint": null,
+            "secondary_queue_host": null,
+            "secondary_queue_microsoft_endpoint": null,
+            "secondary_queue_microsoft_host": null,
+            "secondary_table_endpoint": null,
+            "secondary_table_host": null,
+            "secondary_table_microsoft_endpoint": null,
+            "secondary_table_microsoft_host": null,
+            "secondary_web_endpoint": null,
+            "secondary_web_host": null,
+            "secondary_web_internet_endpoint": null,
+            "secondary_web_internet_host": null,
+            "secondary_web_microsoft_endpoint": null,
+            "secondary_web_microsoft_host": null,
+            "table_encryption_key_type": "Service",
+            "tags": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "azurerm_storage_account",
+      "name": "akslogs",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "access_tier": "Hot",
+            "account_kind": "StorageV2",
+            "account_replication_type": "LRS",
+            "account_tier": "Standard",
+            "allow_nested_items_to_be_public": false,
+            "azure_files_authentication": [],
+            "custom_domain": [],
+            "enable_https_traffic_only": true,
+            "id": "/subscriptions/5e4a3342-b14d-4056-a5e4-5d6d42b997ae/resourceGroups/rg-platform-dev-nu/providers/Microsoft.Storage/storageAccounts/satrnlogs",
+            "identity": [],
+            "infrastructure_encryption_enabled": false,
+            "is_hns_enabled": false,
+            "location": "northeurope",
+            "min_tls_version": "TLS1_2",
+            "name": "satrnlogs",
+            "nfsv3_enabled": false,
+            "primary_access_key": "aCrDIy/FlNl9+qSz8YFRqQtvRrtUQFIPjP0FrCghkG7vt7r+g72uVG2bmBNSnBlHDzp9QkaAvWkt+AStgevZuA==",
+            "primary_blob_connection_string": "DefaultEndpointsProtocol=https;BlobEndpoint=https://satrnlogs.blob.core.windows.net/;AccountName=satrnlogs;AccountKey=aCrDIy/FlNl9+qSz8YFRqQtvRrtUQFIPjP0FrCghkG7vt7r+g72uVG2bmBNSnBlHDzp9QkaAvWkt+AStgevZuA==",
+            "primary_blob_endpoint": "https://satrnlogs.blob.core.windows.net/",
+            "primary_blob_host": "satrnlogs.blob.core.windows.net",
+            "primary_blob_internet_endpoint": null,
+            "primary_blob_internet_host": null,
+            "primary_blob_microsoft_endpoint": null,
+            "primary_blob_microsoft_host": null,
+            "primary_connection_string": "DefaultEndpointsProtocol=https;AccountName=satrnlogs;AccountKey=aCrDIy/FlNl9+qSz8YFRqQtvRrtUQFIPjP0FrCghkG7vt7r+g72uVG2bmBNSnBlHDzp9QkaAvWkt+AStgevZuA==;EndpointSuffix=core.windows.net",
+            "primary_dfs_endpoint": "https://satrnlogs.dfs.core.windows.net/",
+            "primary_dfs_host": "satrnlogs.dfs.core.windows.net",
+            "primary_dfs_internet_endpoint": null,
+            "primary_dfs_internet_host": null,
+            "primary_dfs_microsoft_endpoint": null,
+            "primary_dfs_microsoft_host": null,
+            "primary_file_endpoint": "https://satrnlogs.file.core.windows.net/",
+            "primary_file_host": "satrnlogs.file.core.windows.net",
+            "primary_file_internet_endpoint": null,
+            "primary_file_internet_host": null,
+            "primary_file_microsoft_endpoint": null,
+            "primary_file_microsoft_host": null,
+            "primary_location": "northeurope",
+            "primary_queue_endpoint": "https://satrnlogs.queue.core.windows.net/",
+            "primary_queue_host": "satrnlogs.queue.core.windows.net",
+            "primary_queue_microsoft_endpoint": null,
+            "primary_queue_microsoft_host": null,
+            "primary_table_endpoint": "https://satrnlogs.table.core.windows.net/",
+            "primary_table_host": "satrnlogs.table.core.windows.net",
+            "primary_table_microsoft_endpoint": null,
+            "primary_table_microsoft_host": null,
+            "primary_web_endpoint": "https://satrnlogs.z16.web.core.windows.net/",
+            "primary_web_host": "satrnlogs.z16.web.core.windows.net",
+            "primary_web_internet_endpoint": null,
+            "primary_web_internet_host": null,
+            "primary_web_microsoft_endpoint": null,
+            "primary_web_microsoft_host": null,
+            "queue_encryption_key_type": "Service",
+            "resource_group_name": "rg-platform-dev-nu",
+            "secondary_access_key": "aJiFvI+6ur2Pc1IvBBw85Kgz7OzvcBXdInW0BDXBJ3mvqrh7WqUTXmqF0X6plTILsNY+iM2SiZUV+AStGQpDzA==",
+            "secondary_blob_connection_string": "",
+            "secondary_blob_endpoint": null,
+            "secondary_blob_host": null,
+            "secondary_blob_internet_endpoint": null,
+            "secondary_blob_internet_host": null,
+            "secondary_blob_microsoft_endpoint": null,
+            "secondary_blob_microsoft_host": null,
+            "secondary_connection_string": "DefaultEndpointsProtocol=https;AccountName=satrnlogs;AccountKey=aJiFvI+6ur2Pc1IvBBw85Kgz7OzvcBXdInW0BDXBJ3mvqrh7WqUTXmqF0X6plTILsNY+iM2SiZUV+AStGQpDzA==;EndpointSuffix=core.windows.net",
+            "secondary_dfs_endpoint": null,
+            "secondary_dfs_host": null,
+            "secondary_dfs_internet_endpoint": null,
+            "secondary_dfs_internet_host": null,
+            "secondary_dfs_microsoft_endpoint": null,
+            "secondary_dfs_microsoft_host": null,
+            "secondary_file_endpoint": null,
+            "secondary_file_host": null,
+            "secondary_file_internet_endpoint": null,
+            "secondary_file_internet_host": null,
+            "secondary_file_microsoft_endpoint": null,
+            "secondary_file_microsoft_host": null,
+            "secondary_location": "",
+            "secondary_queue_endpoint": null,
+            "secondary_queue_host": null,
+            "secondary_queue_microsoft_endpoint": null,
+            "secondary_queue_microsoft_host": null,
+            "secondary_table_endpoint": null,
+            "secondary_table_host": null,
+            "secondary_table_microsoft_endpoint": null,
+            "secondary_table_microsoft_host": null,
+            "secondary_web_endpoint": null,
+            "secondary_web_host": null,
+            "secondary_web_internet_endpoint": null,
+            "secondary_web_internet_host": null,
+            "secondary_web_microsoft_endpoint": null,
+            "secondary_web_microsoft_host": null,
+            "table_encryption_key_type": "Service",
+            "tags": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_namespace",
+      "name": "ns",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn",
+            "metadata": [
+              {
+                "annotations": {},
+                "generate_name": "",
+                "generation": 0,
+                "labels": {},
+                "name": "lptrn",
+                "resource_version": "4042585",
+                "uid": "31620ef8-b2d4-4c99-b100-be1bc3e02930"
+              }
+            ],
+            "timeouts": null,
+            "wait_for_default_service_account": false
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjozMDAwMDAwMDAwMDB9fQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_persistent_volume",
+      "name": "data-pv",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn-data",
+            "metadata": [
+              {
+                "annotations": {},
+                "generation": 0,
+                "labels": {
+                  "name": "lptrn-data"
+                },
+                "name": "lptrn-data",
+                "resource_version": "4042622",
+                "uid": "5ba8a602-40e1-4f91-9cfc-10404bdbe942"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "capacity": {
+                  "storage": "1Gi"
+                },
+                "claim_ref": [
+                  {
+                    "name": "lptrn-data",
+                    "namespace": "lptrn"
+                  }
+                ],
+                "mount_options": [
+                  "dir_mode=0777",
+                  "file_mode=0777",
+                  "gid=1001",
+                  "mfsymlinks",
+                  "nobrl",
+                  "uid=1001"
+                ],
+                "node_affinity": [],
+                "persistent_volume_reclaim_policy": "Retain",
+                "persistent_volume_source": [
+                  {
+                    "aws_elastic_block_store": [],
+                    "azure_disk": [],
+                    "azure_file": [
+                      {
+                        "read_only": false,
+                        "secret_name": "azure-lptrn-tnt-docshare",
+                        "secret_namespace": "",
+                        "share_name": "lptrn-data"
+                      }
+                    ],
+                    "ceph_fs": [],
+                    "cinder": [],
+                    "csi": [],
+                    "fc": [],
+                    "flex_volume": [],
+                    "flocker": [],
+                    "gce_persistent_disk": [],
+                    "glusterfs": [],
+                    "host_path": [],
+                    "iscsi": [],
+                    "local": [],
+                    "nfs": [],
+                    "photon_persistent_disk": [],
+                    "quobyte": [],
+                    "rbd": [],
+                    "vsphere_volume": []
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem"
+              }
+            ],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.aksdata",
+            "kubernetes_secret.azure-lpdev-tnt-docshare"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_persistent_volume",
+      "name": "logspv",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "index_key": "coreapi",
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn-coreapi-pv",
+            "metadata": [
+              {
+                "annotations": {},
+                "generation": 0,
+                "labels": {
+                  "name": "coreapi"
+                },
+                "name": "lptrn-coreapi-pv",
+                "resource_version": "4042636",
+                "uid": "a99a81b0-2feb-487f-9462-41e2385a0286"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "capacity": {
+                  "storage": "1Gi"
+                },
+                "claim_ref": [
+                  {
+                    "name": "lptrn-coreapi-pvc",
+                    "namespace": "lptrn"
+                  }
+                ],
+                "mount_options": [
+                  "dir_mode=0777",
+                  "file_mode=0777",
+                  "gid=1001",
+                  "mfsymlinks",
+                  "nobrl",
+                  "uid=1001"
+                ],
+                "node_affinity": [],
+                "persistent_volume_reclaim_policy": "Retain",
+                "persistent_volume_source": [
+                  {
+                    "aws_elastic_block_store": [],
+                    "azure_disk": [],
+                    "azure_file": [
+                      {
+                        "read_only": false,
+                        "secret_name": "azure-lptrnapi-logs-secret",
+                        "secret_namespace": "",
+                        "share_name": "lp-coreapi"
+                      }
+                    ],
+                    "ceph_fs": [],
+                    "cinder": [],
+                    "csi": [],
+                    "fc": [],
+                    "flex_volume": [],
+                    "flocker": [],
+                    "gce_persistent_disk": [],
+                    "glusterfs": [],
+                    "host_path": [],
+                    "iscsi": [],
+                    "local": [],
+                    "nfs": [],
+                    "photon_persistent_disk": [],
+                    "quobyte": [],
+                    "rbd": [],
+                    "vsphere_volume": []
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem"
+              }
+            ],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.akslogs",
+            "kubernetes_secret.logfile_share"
+          ]
+        },
+        {
+          "index_key": "gridsapi",
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn-gridsapi-pv",
+            "metadata": [
+              {
+                "annotations": {},
+                "generation": 0,
+                "labels": {
+                  "name": "gridsapi"
+                },
+                "name": "lptrn-gridsapi-pv",
+                "resource_version": "4042640",
+                "uid": "10f54afd-c0ea-4827-8b9f-d55cbcfb231a"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "capacity": {
+                  "storage": "1Gi"
+                },
+                "claim_ref": [
+                  {
+                    "name": "lptrn-gridsapi-pvc",
+                    "namespace": "lptrn"
+                  }
+                ],
+                "mount_options": [
+                  "dir_mode=0777",
+                  "file_mode=0777",
+                  "gid=1001",
+                  "mfsymlinks",
+                  "nobrl",
+                  "uid=1001"
+                ],
+                "node_affinity": [],
+                "persistent_volume_reclaim_policy": "Retain",
+                "persistent_volume_source": [
+                  {
+                    "aws_elastic_block_store": [],
+                    "azure_disk": [],
+                    "azure_file": [
+                      {
+                        "read_only": false,
+                        "secret_name": "azure-lptrnapi-logs-secret",
+                        "secret_namespace": "",
+                        "share_name": "lp-gridsapi"
+                      }
+                    ],
+                    "ceph_fs": [],
+                    "cinder": [],
+                    "csi": [],
+                    "fc": [],
+                    "flex_volume": [],
+                    "flocker": [],
+                    "gce_persistent_disk": [],
+                    "glusterfs": [],
+                    "host_path": [],
+                    "iscsi": [],
+                    "local": [],
+                    "nfs": [],
+                    "photon_persistent_disk": [],
+                    "quobyte": [],
+                    "rbd": [],
+                    "vsphere_volume": []
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem"
+              }
+            ],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.akslogs",
+            "kubernetes_secret.logfile_share"
+          ]
+        },
+        {
+          "index_key": "iamapi",
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn-iamapi-pv",
+            "metadata": [
+              {
+                "annotations": {},
+                "generation": 0,
+                "labels": {
+                  "name": "iamapi"
+                },
+                "name": "lptrn-iamapi-pv",
+                "resource_version": "4042644",
+                "uid": "7b83b9e0-1cc3-42fb-850f-75f4bbcd8209"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "capacity": {
+                  "storage": "1Gi"
+                },
+                "claim_ref": [
+                  {
+                    "name": "lptrn-iamapi-pvc",
+                    "namespace": "lptrn"
+                  }
+                ],
+                "mount_options": [
+                  "dir_mode=0777",
+                  "file_mode=0777",
+                  "gid=1001",
+                  "mfsymlinks",
+                  "nobrl",
+                  "uid=1001"
+                ],
+                "node_affinity": [],
+                "persistent_volume_reclaim_policy": "Retain",
+                "persistent_volume_source": [
+                  {
+                    "aws_elastic_block_store": [],
+                    "azure_disk": [],
+                    "azure_file": [
+                      {
+                        "read_only": false,
+                        "secret_name": "azure-lptrnapi-logs-secret",
+                        "secret_namespace": "",
+                        "share_name": "lp-iamapi"
+                      }
+                    ],
+                    "ceph_fs": [],
+                    "cinder": [],
+                    "csi": [],
+                    "fc": [],
+                    "flex_volume": [],
+                    "flocker": [],
+                    "gce_persistent_disk": [],
+                    "glusterfs": [],
+                    "host_path": [],
+                    "iscsi": [],
+                    "local": [],
+                    "nfs": [],
+                    "photon_persistent_disk": [],
+                    "quobyte": [],
+                    "rbd": [],
+                    "vsphere_volume": []
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem"
+              }
+            ],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.akslogs",
+            "kubernetes_secret.logfile_share"
+          ]
+        },
+        {
+          "index_key": "logapi",
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn-logapi-pv",
+            "metadata": [
+              {
+                "annotations": {},
+                "generation": 0,
+                "labels": {
+                  "name": "logapi"
+                },
+                "name": "lptrn-logapi-pv",
+                "resource_version": "4042655",
+                "uid": "dcfd0cc9-c83f-40b2-b2b2-152e040b3150"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "capacity": {
+                  "storage": "1Gi"
+                },
+                "claim_ref": [
+                  {
+                    "name": "lptrn-logapi-pvc",
+                    "namespace": "lptrn"
+                  }
+                ],
+                "mount_options": [
+                  "dir_mode=0777",
+                  "file_mode=0777",
+                  "gid=1001",
+                  "mfsymlinks",
+                  "nobrl",
+                  "uid=1001"
+                ],
+                "node_affinity": [],
+                "persistent_volume_reclaim_policy": "Retain",
+                "persistent_volume_source": [
+                  {
+                    "aws_elastic_block_store": [],
+                    "azure_disk": [],
+                    "azure_file": [
+                      {
+                        "read_only": false,
+                        "secret_name": "azure-lptrnapi-logs-secret",
+                        "secret_namespace": "",
+                        "share_name": "lp-logapi"
+                      }
+                    ],
+                    "ceph_fs": [],
+                    "cinder": [],
+                    "csi": [],
+                    "fc": [],
+                    "flex_volume": [],
+                    "flocker": [],
+                    "gce_persistent_disk": [],
+                    "glusterfs": [],
+                    "host_path": [],
+                    "iscsi": [],
+                    "local": [],
+                    "nfs": [],
+                    "photon_persistent_disk": [],
+                    "quobyte": [],
+                    "rbd": [],
+                    "vsphere_volume": []
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem"
+              }
+            ],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.akslogs",
+            "kubernetes_secret.logfile_share"
+          ]
+        },
+        {
+          "index_key": "masterdataapi",
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn-masterdataapi-pv",
+            "metadata": [
+              {
+                "annotations": {},
+                "generation": 0,
+                "labels": {
+                  "name": "masterdataapi"
+                },
+                "name": "lptrn-masterdataapi-pv",
+                "resource_version": "4042651",
+                "uid": "d0a397d5-4b8b-458e-ae92-dbb1e74dbd06"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "capacity": {
+                  "storage": "1Gi"
+                },
+                "claim_ref": [
+                  {
+                    "name": "lptrn-masterdataapi-pvc",
+                    "namespace": "lptrn"
+                  }
+                ],
+                "mount_options": [
+                  "dir_mode=0777",
+                  "file_mode=0777",
+                  "gid=1001",
+                  "mfsymlinks",
+                  "nobrl",
+                  "uid=1001"
+                ],
+                "node_affinity": [],
+                "persistent_volume_reclaim_policy": "Retain",
+                "persistent_volume_source": [
+                  {
+                    "aws_elastic_block_store": [],
+                    "azure_disk": [],
+                    "azure_file": [
+                      {
+                        "read_only": false,
+                        "secret_name": "azure-lptrnapi-logs-secret",
+                        "secret_namespace": "",
+                        "share_name": "lp-masterdataapi"
+                      }
+                    ],
+                    "ceph_fs": [],
+                    "cinder": [],
+                    "csi": [],
+                    "fc": [],
+                    "flex_volume": [],
+                    "flocker": [],
+                    "gce_persistent_disk": [],
+                    "glusterfs": [],
+                    "host_path": [],
+                    "iscsi": [],
+                    "local": [],
+                    "nfs": [],
+                    "photon_persistent_disk": [],
+                    "quobyte": [],
+                    "rbd": [],
+                    "vsphere_volume": []
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem"
+              }
+            ],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.akslogs",
+            "kubernetes_secret.logfile_share"
+          ]
+        },
+        {
+          "index_key": "tntcatlogapi",
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn-tntcatlogapi-pv",
+            "metadata": [
+              {
+                "annotations": {},
+                "generation": 0,
+                "labels": {
+                  "name": "tntcatlogapi"
+                },
+                "name": "lptrn-tntcatlogapi-pv",
+                "resource_version": "4042629",
+                "uid": "e0dd345d-907b-40ba-b292-143edd730f6b"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "capacity": {
+                  "storage": "1Gi"
+                },
+                "claim_ref": [
+                  {
+                    "name": "lptrn-tntcatlogapi-pvc",
+                    "namespace": "lptrn"
+                  }
+                ],
+                "mount_options": [
+                  "dir_mode=0777",
+                  "file_mode=0777",
+                  "gid=1001",
+                  "mfsymlinks",
+                  "nobrl",
+                  "uid=1001"
+                ],
+                "node_affinity": [],
+                "persistent_volume_reclaim_policy": "Retain",
+                "persistent_volume_source": [
+                  {
+                    "aws_elastic_block_store": [],
+                    "azure_disk": [],
+                    "azure_file": [
+                      {
+                        "read_only": false,
+                        "secret_name": "azure-lptrnapi-logs-secret",
+                        "secret_namespace": "",
+                        "share_name": "lp-tntcatlogapi"
+                      }
+                    ],
+                    "ceph_fs": [],
+                    "cinder": [],
+                    "csi": [],
+                    "fc": [],
+                    "flex_volume": [],
+                    "flocker": [],
+                    "gce_persistent_disk": [],
+                    "glusterfs": [],
+                    "host_path": [],
+                    "iscsi": [],
+                    "local": [],
+                    "nfs": [],
+                    "photon_persistent_disk": [],
+                    "quobyte": [],
+                    "rbd": [],
+                    "vsphere_volume": []
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem"
+              }
+            ],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.akslogs",
+            "kubernetes_secret.logfile_share"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_persistent_volume",
+      "name": "pv",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn",
+            "metadata": [
+              {
+                "annotations": {},
+                "generation": 0,
+                "labels": {
+                  "name": "lptrn"
+                },
+                "name": "lptrn",
+                "resource_version": "4042617",
+                "uid": "27e172ed-cc3e-422a-b3c4-331190c736f3"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "capacity": {
+                  "storage": "1Gi"
+                },
+                "claim_ref": [
+                  {
+                    "name": "lptrn",
+                    "namespace": "lptrn"
+                  }
+                ],
+                "mount_options": [
+                  "dir_mode=0777",
+                  "file_mode=0777",
+                  "gid=1001",
+                  "mfsymlinks",
+                  "nobrl",
+                  "uid=1001"
+                ],
+                "node_affinity": [],
+                "persistent_volume_reclaim_policy": "Retain",
+                "persistent_volume_source": [
+                  {
+                    "aws_elastic_block_store": [],
+                    "azure_disk": [],
+                    "azure_file": [
+                      {
+                        "read_only": false,
+                        "secret_name": "azure-lptrn-tnt-docshare",
+                        "secret_namespace": "",
+                        "share_name": "lptrn"
+                      }
+                    ],
+                    "ceph_fs": [],
+                    "cinder": [],
+                    "csi": [],
+                    "fc": [],
+                    "flex_volume": [],
+                    "flocker": [],
+                    "gce_persistent_disk": [],
+                    "glusterfs": [],
+                    "host_path": [],
+                    "iscsi": [],
+                    "local": [],
+                    "nfs": [],
+                    "photon_persistent_disk": [],
+                    "quobyte": [],
+                    "rbd": [],
+                    "vsphere_volume": []
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem"
+              }
+            ],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.aksdata",
+            "kubernetes_secret.azure-lpdev-tnt-docshare"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_persistent_volume_claim",
+      "name": "data-pvcs",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn/lptrn-data",
+            "metadata": [
+              {
+                "annotations": {},
+                "generate_name": "",
+                "generation": 0,
+                "labels": {},
+                "name": "lptrn-data",
+                "namespace": "lptrn",
+                "resource_version": "4042624",
+                "uid": "8841d4e1-f74a-476e-a419-3efc63ea08af"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "resources": [
+                  {
+                    "limits": {},
+                    "requests": {
+                      "storage": "1Gi"
+                    }
+                  }
+                ],
+                "selector": [
+                  {
+                    "match_expressions": [],
+                    "match_labels": {
+                      "name": "lptrn-data"
+                    }
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem",
+                "volume_name": "lptrn-data"
+              }
+            ],
+            "timeouts": null,
+            "wait_until_bound": true
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.aksdata",
+            "kubernetes_persistent_volume.data-pv",
+            "kubernetes_secret.azure-lpdev-tnt-docshare"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_persistent_volume_claim",
+      "name": "logspvc",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "index_key": "coreapi",
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn/lptrn-coreapi-pvc",
+            "metadata": [
+              {
+                "annotations": {},
+                "generate_name": "",
+                "generation": 0,
+                "labels": {},
+                "name": "lptrn-coreapi-pvc",
+                "namespace": "lptrn",
+                "resource_version": "4042638",
+                "uid": "335b9d48-1c61-46df-8e5e-7f9ca6ae3ee3"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "resources": [
+                  {
+                    "limits": {},
+                    "requests": {
+                      "storage": "1Gi"
+                    }
+                  }
+                ],
+                "selector": [
+                  {
+                    "match_expressions": [],
+                    "match_labels": {
+                      "name": "coreapi"
+                    }
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem",
+                "volume_name": "lptrn-coreapi-pv"
+              }
+            ],
+            "timeouts": null,
+            "wait_until_bound": true
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.akslogs",
+            "kubernetes_persistent_volume.logspv",
+            "kubernetes_secret.logfile_share"
+          ]
+        },
+        {
+          "index_key": "gridsapi",
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn/lptrn-gridsapi-pvc",
+            "metadata": [
+              {
+                "annotations": {},
+                "generate_name": "",
+                "generation": 0,
+                "labels": {},
+                "name": "lptrn-gridsapi-pvc",
+                "namespace": "lptrn",
+                "resource_version": "4042642",
+                "uid": "40eb7f0f-b89d-4f05-8481-d1cc863c8c60"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "resources": [
+                  {
+                    "limits": {},
+                    "requests": {
+                      "storage": "1Gi"
+                    }
+                  }
+                ],
+                "selector": [
+                  {
+                    "match_expressions": [],
+                    "match_labels": {
+                      "name": "gridsapi"
+                    }
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem",
+                "volume_name": "lptrn-gridsapi-pv"
+              }
+            ],
+            "timeouts": null,
+            "wait_until_bound": true
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.akslogs",
+            "kubernetes_persistent_volume.logspv",
+            "kubernetes_secret.logfile_share"
+          ]
+        },
+        {
+          "index_key": "iamapi",
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn/lptrn-iamapi-pvc",
+            "metadata": [
+              {
+                "annotations": {},
+                "generate_name": "",
+                "generation": 0,
+                "labels": {},
+                "name": "lptrn-iamapi-pvc",
+                "namespace": "lptrn",
+                "resource_version": "4042647",
+                "uid": "08f01de2-0c30-4637-92b3-22f46f93bd03"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "resources": [
+                  {
+                    "limits": {},
+                    "requests": {
+                      "storage": "1Gi"
+                    }
+                  }
+                ],
+                "selector": [
+                  {
+                    "match_expressions": [],
+                    "match_labels": {
+                      "name": "iamapi"
+                    }
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem",
+                "volume_name": "lptrn-iamapi-pv"
+              }
+            ],
+            "timeouts": null,
+            "wait_until_bound": true
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.akslogs",
+            "kubernetes_persistent_volume.logspv",
+            "kubernetes_secret.logfile_share"
+          ]
+        },
+        {
+          "index_key": "logapi",
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn/lptrn-logapi-pvc",
+            "metadata": [
+              {
+                "annotations": {},
+                "generate_name": "",
+                "generation": 0,
+                "labels": {},
+                "name": "lptrn-logapi-pvc",
+                "namespace": "lptrn",
+                "resource_version": "4042657",
+                "uid": "e8d434a7-fef9-4456-8600-b96f05de8b49"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "resources": [
+                  {
+                    "limits": {},
+                    "requests": {
+                      "storage": "1Gi"
+                    }
+                  }
+                ],
+                "selector": [
+                  {
+                    "match_expressions": [],
+                    "match_labels": {
+                      "name": "logapi"
+                    }
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem",
+                "volume_name": "lptrn-logapi-pv"
+              }
+            ],
+            "timeouts": null,
+            "wait_until_bound": true
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.akslogs",
+            "kubernetes_persistent_volume.logspv",
+            "kubernetes_secret.logfile_share"
+          ]
+        },
+        {
+          "index_key": "masterdataapi",
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn/lptrn-masterdataapi-pvc",
+            "metadata": [
+              {
+                "annotations": {},
+                "generate_name": "",
+                "generation": 0,
+                "labels": {},
+                "name": "lptrn-masterdataapi-pvc",
+                "namespace": "lptrn",
+                "resource_version": "4042653",
+                "uid": "68148fa5-f138-487f-a61d-ca50c3aca730"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "resources": [
+                  {
+                    "limits": {},
+                    "requests": {
+                      "storage": "1Gi"
+                    }
+                  }
+                ],
+                "selector": [
+                  {
+                    "match_expressions": [],
+                    "match_labels": {
+                      "name": "masterdataapi"
+                    }
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem",
+                "volume_name": "lptrn-masterdataapi-pv"
+              }
+            ],
+            "timeouts": null,
+            "wait_until_bound": true
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.akslogs",
+            "kubernetes_persistent_volume.logspv",
+            "kubernetes_secret.logfile_share"
+          ]
+        },
+        {
+          "index_key": "tntcatlogapi",
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn/lptrn-tntcatlogapi-pvc",
+            "metadata": [
+              {
+                "annotations": {},
+                "generate_name": "",
+                "generation": 0,
+                "labels": {},
+                "name": "lptrn-tntcatlogapi-pvc",
+                "namespace": "lptrn",
+                "resource_version": "4042634",
+                "uid": "b51b6ea8-96d4-4317-ab56-914265d7b0b5"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "resources": [
+                  {
+                    "limits": {},
+                    "requests": {
+                      "storage": "1Gi"
+                    }
+                  }
+                ],
+                "selector": [
+                  {
+                    "match_expressions": [],
+                    "match_labels": {
+                      "name": "tntcatlogapi"
+                    }
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem",
+                "volume_name": "lptrn-tntcatlogapi-pv"
+              }
+            ],
+            "timeouts": null,
+            "wait_until_bound": true
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.akslogs",
+            "kubernetes_persistent_volume.logspv",
+            "kubernetes_secret.logfile_share"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_persistent_volume_claim",
+      "name": "pvc",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "lptrn/lptrn",
+            "metadata": [
+              {
+                "annotations": {},
+                "generate_name": "",
+                "generation": 0,
+                "labels": {},
+                "name": "lptrn",
+                "namespace": "lptrn",
+                "resource_version": "4042619",
+                "uid": "2720c208-52fe-4c19-84c7-f44a3fde528b"
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteMany"
+                ],
+                "resources": [
+                  {
+                    "limits": {},
+                    "requests": {
+                      "storage": "1Gi"
+                    }
+                  }
+                ],
+                "selector": [
+                  {
+                    "match_expressions": [],
+                    "match_labels": {
+                      "name": "lptrn"
+                    }
+                  }
+                ],
+                "storage_class_name": "azurefile",
+                "volume_mode": "Filesystem",
+                "volume_name": "lptrn"
+              }
+            ],
+            "timeouts": null,
+            "wait_until_bound": true
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.aksdata",
+            "kubernetes_persistent_volume.pv",
+            "kubernetes_secret.azure-lpdev-tnt-docshare"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_secret",
+      "name": "azure-lpdev-tnt-docshare",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "binary_data": null,
+            "data": {
+              "azurestorageaccountkey": "jHdJQxDblPoMJHIioOq5pFAVB4dm100aYDSmcMw+p31dqZ9KzlQO22aynpMkqfdfm5M5rEKyuSKz+AStpScA2w==",
+              "azurestorageaccountname": "satrndata"
+            },
+            "id": "lptrn/azure-lptrn-tnt-docshare",
+            "immutable": false,
+            "metadata": [
+              {
+                "annotations": {},
+                "generate_name": "",
+                "generation": 0,
+                "labels": {},
+                "name": "azure-lptrn-tnt-docshare",
+                "namespace": "lptrn",
+                "resource_version": "4042598",
+                "uid": "8ea97c7e-0fd1-439c-be8d-dbf3aa550064"
+              }
+            ],
+            "timeouts": null,
+            "type": "Opaque",
+            "wait_for_service_account_token": true
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "data"
+              },
+              {
+                "type": "index",
+                "value": {
+                  "value": "azurestorageaccountkey",
+                  "type": "string"
+                }
+              }
+            ]
+          ],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.azurerm_storage_account.aksdata"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_secret",
+      "name": "logfile_share",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "binary_data": null,
+            "data": {
+              "azurestorageaccountkey": "aCrDIy/FlNl9+qSz8YFRqQtvRrtUQFIPjP0FrCghkG7vt7r+g72uVG2bmBNSnBlHDzp9QkaAvWkt+AStgevZuA==",
+              "azurestorageaccountname": "satrnlogs"
+            },
+            "id": "lptrn/azure-lptrnapi-logs-secret",
+            "immutable": false,
+            "metadata": [
+              {
+                "annotations": {},
+                "generate_name": "",
+                "generation": 0,
+                "labels": {},
+                "name": "azure-lptrnapi-logs-secret",
+                "namespace": "lptrn",
+                "resource_version": "4042597",
+                "uid": "4ae83814-4a6f-4678-8e51-14b5d63ec234"
+              }
+            ],
+            "timeouts": null,
+            "type": "Opaque",
+            "wait_for_service_account_token": true
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "data"
+              },
+              {
+                "type": "index",
+                "value": {
+                  "value": "azurestorageaccountkey",
+                  "type": "string"
+                }
+              }
+            ]
+          ],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.azurerm_storage_account.akslogs"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_secret_v1",
+      "name": "devacr",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "binary_data": null,
+            "data": {
+              ".dockerconfigjson": "{\"auths\":{\"lpacrtrn.azurecr.io\":{\"auth\":\"bHBhY3J0cm46eGQvWWdGdDZCYUtCT211UE05NTFIZ0hzQUhXOUplVllaOVFsaFVUcjNBK0FDUkE2WVJBdw==\",\"password\":\"xd/YgFt6BaKBOmuPM951HgHsAHW9JeVYZ9QlhUTr3A+ACRA6YRAw\",\"username\":\"lpacrtrn\"}}}"
+            },
+            "id": "lptrn/acr-secret",
+            "immutable": false,
+            "metadata": [
+              {
+                "annotations": {},
+                "generate_name": "",
+                "generation": 0,
+                "labels": {},
+                "name": "acr-secret",
+                "namespace": "lptrn",
+                "resource_version": "4042587",
+                "uid": "aebd84b4-c11f-4512-b66e-8b5b90488f56"
+              }
+            ],
+            "timeouts": null,
+            "type": "kubernetes.io/dockerconfigjson",
+            "wait_for_service_account_token": true
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMH19"
+        }
+      ]
+    },
+    {
+      "module": "module.api",
+      "mode": "managed",
+      "type": "helm_release",
+      "name": "apis",
+      "provider": "provider[\"registry.terraform.io/hashicorp/helm\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "atomic": true,
+            "chart": "../helm/apichart",
+            "cleanup_on_fail": false,
+            "create_namespace": false,
+            "dependency_update": false,
+            "description": null,
+            "devel": null,
+            "disable_crd_hooks": false,
+            "disable_openapi_validation": false,
+            "disable_webhooks": false,
+            "force_update": false,
+            "id": "lp-coreapi",
+            "keyring": null,
+            "lint": false,
+            "manifest": null,
+            "max_history": 0,
+            "metadata": [
+              {
+                "app_version": "",
+                "chart": "leasepoint",
+                "name": "lp-coreapi",
+                "namespace": "lptrn",
+                "revision": 1,
+                "values": "{\"autoscaling\":{\"enabled\":true,\"maxReplicas\":10,\"minReplicas\":1,\"targetCPUUtilizationPercentage\":65,\"targetMemoryUtilizationPercentage\":75},\"configmap\":{\"configuration\":{\"ASPNETCORE_ENVIRONMENT\":\"Development\",\"ASPNETCORE_TEMP\":\"/lpusr/lpapi/Logs\",\"BaseAddress\":\"http://lp-tntcatlogapi-service.lptrn.svc.cluster.local:8080/api/accounts\",\"LOGGING_LEVEL\":\"Error\",\"TMPDIR\":\"/lpusr/lpapi/Logs\"},\"enabled\":true},\"deployment\":{\"configChecksum\":true,\"containerPort\":8081,\"containers\":{\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true,\"runAsGroup\":3000,\"runAsUser\":1000}},\"hostIPC\":false,\"hostNetwork\":false,\"hostPID\":false,\"imagePullPolicy\":\"Always\",\"progressDeadlineSeconds\":600,\"restartPolicy\":\"Always\",\"revisionHistoryLimit\":2,\"securityContext\":{\"fsGroup\":2000,\"runAsNonRoot\":true},\"serviceAccount\":\"lp-coreapi\",\"serviceAccountName\":\"lp-coreapi\",\"strategy\":{\"rollingUpdate\":{\"maxSurge\":\"25%\",\"maxUnavailable\":\"25%\"},\"type\":\"RollingUpdate\"},\"terminationGracePeriodSeconds\":30,\"volumeMounts\":[{\"mountPath\":\"lpusr/lpapi/Logs\",\"name\":\"lptrn-logs\"},{\"mountPath\":\"lpusr/lpapi/lptrn\",\"name\":\"lptrn\"},{\"mountPath\":\"lpusr/lpapi/lptrn-data\",\"name\":\"lptrn-data\"}],\"volumes\":[{\"name\":\"lptrn-logs\",\"persistentVolumeClaim\":{\"claimName\":\"lptrn-coreapi-pvc\"}},{\"name\":\"lptrn\",\"persistentVolumeClaim\":{\"claimName\":\"lptrn\"}},{\"name\":\"lptrn-data\",\"persistentVolumeClaim\":{\"claimName\":\"lptrn-data\"}}]},\"image\":{\"repository\":\"lpacrtrn.azurecr.io/lp-coreapi\",\"tag\":\"master-10.5.144.080224\"},\"ingress\":{\"annotations\":{\"kubernetes.io/ingress.class\":\"nginx\",\"nginx.ingress.kubernetes.io/affinity\":\"cookie\",\"nginx.ingress.kubernetes.io/affinity-mode\":\"persistent\",\"nginx.ingress.kubernetes.io/force-ssl-redirect\":\"true\",\"nginx.ingress.kubernetes.io/limit-burst-multiplier\":\"10\",\"nginx.ingress.kubernetes.io/limit-connections\":\"50\",\"nginx.ingress.kubernetes.io/limit-rpm\":\"300\",\"nginx.ingress.kubernetes.io/limit-rps\":\"45\",\"nginx.ingress.kubernetes.io/proxy-body-size\":\"128m\",\"nginx.ingress.kubernetes.io/proxy-connect-timeout\":\"600\",\"nginx.ingress.kubernetes.io/proxy-next-upstream-timeout\":\"600\",\"nginx.ingress.kubernetes.io/proxy-read-timeout\":\"3600\",\"nginx.ingress.kubernetes.io/proxy-send-timeout\":\"3600\",\"nginx.ingress.kubernetes.io/rewrite-target\":\"/$2\",\"nginx.ingress.kubernetes.io/session-cookie-conditional-samesite-none\":\"true\",\"nginx.ingress.kubernetes.io/session-cookie-expires\":\"1800\",\"nginx.ingress.kubernetes.io/session-cookie-max-age\":\"1800\",\"nginx.ingress.kubernetes.io/session-cookie-name\":\"LPINGRESSCOOKIE\",\"nginx.ingress.kubernetes.io/session-cookie-samesite\":\"Strict\",\"nginx.ingress.kubernetes.io/ssl-prefer-server-ciphers\":\"true\",\"nginx.org/client-max-body-size\":\"50m\"},\"className\":\"\",\"enabled\":true,\"hosts\":[{\"host\":\"lptrn.v10.leasepoint.aero\",\"paths\":[{\"path\":\"/core(/|$)(.*)\",\"pathType\":\"Prefix\"}]}],\"tls\":[{\"hosts\":[\"lptrn.v10.leasepoint.aero\"],\"secretName\":\"aks-ingress-tls\"}]},\"labels\":{\"environment\":\"development\"},\"nodeSelector\":{\"kubernetes.io/os\":\"linux\"},\"probes\":{\"enabled\":true,\"livenessProbe\":{\"failureThreshold\":5,\"httpGet\":{\"path\":\"/liveness\",\"port\":8081},\"initialDelaySeconds\":5,\"periodSeconds\":10,\"successThreshold\":1,\"timeoutSeconds\":1},\"readinessProbe\":{\"failureThreshold\":5,\"httpGet\":{\"path\":\"/readiness\",\"port\":8081},\"initialDelaySeconds\":5,\"periodSeconds\":10,\"successThreshold\":1,\"timeoutSeconds\":1},\"terminationMessagePath\":\"/dev/termination-log\",\"terminationMessagePolicy\":\"File\"},\"resources\":{\"limits\":{\"cpu\":\"500m\",\"memory\":\"650Mi\"},\"requests\":{\"cpu\":\"350m\",\"memory\":\"500Mi\"}},\"service\":{\"enabled\":true,\"port\":443},\"serviceAccount\":{\"automountServiceAccountToken\":false,\"create\":true,\"name\":\"lp-coreapi\"}}",
+                "version": "0.1.0"
+              }
+            ],
+            "name": "lp-coreapi",
+            "namespace": "lptrn",
+            "pass_credentials": false,
+            "postrender": [],
+            "recreate_pods": false,
+            "render_subchart_notes": true,
+            "replace": false,
+            "repository": null,
+            "repository_ca_file": null,
+            "repository_cert_file": null,
+            "repository_key_file": null,
+            "repository_password": null,
+            "repository_username": null,
+            "reset_values": false,
+            "reuse_values": false,
+            "set": [
+              {
+                "name": "configmap.configuration.ASPNETCORE_ENVIRONMENT",
+                "type": "",
+                "value": "Development"
+              },
+              {
+                "name": "configmap.configuration.BaseAddress",
+                "type": "",
+                "value": "http://lp-tntcatlogapi-service.lptrn.svc.cluster.local:8080/api/accounts"
+              },
+              {
+                "name": "configmap.enabled",
+                "type": "",
+                "value": "true"
+              },
+              {
+                "name": "deployment.volumeMounts[0].mountPath",
+                "type": "",
+                "value": "lpusr/lpapi/Logs"
+              },
+              {
+                "name": "deployment.volumeMounts[0].name",
+                "type": "",
+                "value": "lptrn-logs"
+              },
+              {
+                "name": "deployment.volumeMounts[1].mountPath",
+                "type": "",
+                "value": "lpusr/lpapi/lptrn"
+              },
+              {
+                "name": "deployment.volumeMounts[1].name",
+                "type": "",
+                "value": "lptrn"
+              },
+              {
+                "name": "deployment.volumeMounts[2].mountPath",
+                "type": "",
+                "value": "lpusr/lpapi/lptrn-data"
+              },
+              {
+                "name": "deployment.volumeMounts[2].name",
+                "type": "",
+                "value": "lptrn-data"
+              },
+              {
+                "name": "deployment.volumes[0].name",
+                "type": "",
+                "value": "lptrn-logs"
+              },
+              {
+                "name": "deployment.volumes[0].persistentVolumeClaim.claimName",
+                "type": "",
+                "value": "lptrn-coreapi-pvc"
+              },
+              {
+                "name": "deployment.volumes[1].name",
+                "type": "",
+                "value": "lptrn"
+              },
+              {
+                "name": "deployment.volumes[1].persistentVolumeClaim.claimName",
+                "type": "",
+                "value": "lptrn"
+              },
+              {
+                "name": "deployment.volumes[2].name",
+                "type": "",
+                "value": "lptrn-data"
+              },
+              {
+                "name": "deployment.volumes[2].persistentVolumeClaim.claimName",
+                "type": "",
+                "value": "lptrn-data"
+              },
+              {
+                "name": "image.repository",
+                "type": "",
+                "value": "lpacrtrn.azurecr.io/lp-coreapi"
+              },
+              {
+                "name": "image.tag",
+                "type": "",
+                "value": "master-10.5.144.080224"
+              },
+              {
+                "name": "labels.environment",
+                "type": "",
+                "value": "development"
+              }
+            ],
+            "set_list": [],
+            "set_sensitive": [],
+            "skip_crds": false,
+            "status": "deployed",
+            "timeout": 300,
+            "values": [
+              "# Default values for lp-coreapi backend microservice\n\nnodeSelector:\n  kubernetes.io/os: linux\n  \nserviceAccount:\n  create: true\n  name: \"lp-coreapi\"\n  automountServiceAccountToken: false\n\nservice:\n  enabled: true\n  port: 443\n\nconfigmap:\n  enabled: true\n  configuration:\n    LOGGING_LEVEL: 'Error'\n    ASPNETCORE_TEMP: '/lpusr/lpapi/Logs'\n    TMPDIR: '/lpusr/lpapi/Logs'\n\ndeployment:\n  containerPort: 8081\n  configChecksum: true \n  securityContext:      \n      runAsNonRoot: true\n      fsGroup: 2000   \n  restartPolicy: Always\n  terminationGracePeriodSeconds: 30\n  serviceAccountName: lp-coreapi\n  serviceAccount: lp-coreapi\n  imagePullPolicy: Always\n  hostNetwork: false\n  hostPID: false\n  hostIPC: false\n  strategy:\n    type: RollingUpdate\n    rollingUpdate:\n      maxUnavailable: 25%\n      maxSurge: 25%\n  revisionHistoryLimit: 2\n  progressDeadlineSeconds: 600\n  containers:\n    securityContext:\n      runAsUser: 1000\n      allowPrivilegeEscalation: false\n      readOnlyRootFilesystem: true\n      runAsGroup: 3000\n      capabilities:\n        drop:\n           - ALL \n\ningress:\n  enabled: true\n  className: \"\"\n  annotations:\n    kubernetes.io/ingress.class: nginx\n    nginx.ingress.kubernetes.io/rewrite-target: /$2\n\n    #Max body size\n    nginx.ingress.kubernetes.io/proxy-body-size: 128m\n    nginx.org/client-max-body-size: 50m\n\n    #Timeout\n    nginx.ingress.kubernetes.io/proxy-connect-timeout: \"600\"\n    nginx.ingress.kubernetes.io/proxy-send-timeout: \"3600\"\n    nginx.ingress.kubernetes.io/proxy-read-timeout: \"3600\"\n    nginx.ingress.kubernetes.io/proxy-next-upstream-timeout: \"600\"\n\n    # #SSLconfig\n    nginx.ingress.kubernetes.io/force-ssl-redirect: \"true\" \n    nginx.ingress.kubernetes.io/ssl-prefer-server-ciphers: \"true\"\n    \n    # #Ratelimit\n    nginx.ingress.kubernetes.io/limit-burst-multiplier: \"10\"\n    nginx.ingress.kubernetes.io/limit-connections: \"50\"\n    nginx.ingress.kubernetes.io/limit-rpm: \"300\"\n    nginx.ingress.kubernetes.io/limit-rps: \"45\"\n\n   #Perfannotaions\n    nginx.ingress.kubernetes.io/affinity: \"cookie\"\n    nginx.ingress.kubernetes.io/session-cookie-name: \"LPINGRESSCOOKIE\"\n    nginx.ingress.kubernetes.io/session-cookie-expires: \"1800\"\n    nginx.ingress.kubernetes.io/session-cookie-max-age: \"1800\"\n    nginx.ingress.kubernetes.io/affinity-mode: \"persistent\"\n    nginx.ingress.kubernetes.io/session-cookie-samesite: \"Strict\"\n    nginx.ingress.kubernetes.io/session-cookie-conditional-samesite-none: \"true\"\n\nresources:\n  requests:\n    memory: \"500Mi\"\n    cpu: \"350m\"\n  limits:\n    memory: \"650Mi\"\n    cpu: \"500m\"\n\nautoscaling:\n  enabled: true\n  minReplicas: 1\n  maxReplicas: 10\n  targetCPUUtilizationPercentage: 65\n  targetMemoryUtilizationPercentage: 75\n\nprobes:\n  enabled: true\n  livenessProbe:\n    httpGet:\n      path: /liveness\n      port: 8081\n    initialDelaySeconds: 5\n    periodSeconds: 10\n    timeoutSeconds: 1\n    successThreshold: 1\n    failureThreshold: 5\n  readinessProbe:\n    httpGet:\n      path: /readiness\n      port: 8081\n    initialDelaySeconds: 5\n    periodSeconds: 10\n    timeoutSeconds: 1\n    successThreshold: 1\n    failureThreshold: 5\n  terminationMessagePath: /dev/termination-log\n  terminationMessagePolicy: File",
+              "# # Environment specifc values for lp-tntcatlogapi microservice.\n\n# secrets:\n#   userAssignedIdentityID: \"7039f764-66bb-42c6-8817-5929decfe9e3\" # AKS agent pool application ID - managed identity\n#   useVMManagedIdentity: true\n#   usePodIdentity: false\n# # Enter azure cloud resources here along with the name of the Vault to pull secrets from\n# azure:\n#   resourceGroup: \"rg-platform-dev-nu\" # [REQUIRED for version \u003c 0.0.4] the resource group of the KeyVault\n#   subscriptionId: \"5e4a3342-b14d-4056-a5e4-5d6d42b997ae\" # [REQUIRED for version \u003c 0.0.4] the subscription ID of the KeyVault\n#   tenantId: \"7cb865ab-84eb-4ef4-8dec-26fae5d374c4\" #Updated # the tenant ID of the AD\n#   keyvaultName: \"lpdev-keyvault\"\n\n# labels:\n#   environment: development\n  \n# image:\n#   repository: lpacrtrn.azurecr.io/lp-coreapi\n\n# configmap:\n#   enabled: true\n#   configuration:    \n#     ASPNETCORE_ENVIRONMENT: 'Development'   \n#     BaseAddress : 'http://lp-tntcatlogapi-service.lptrn.svc.cluster.local:8080/api/accounts'\n\n# deployment: \n#   volumes:\n#     - name: lptrn-logs\n#       persistentVolumeClaim:\n#         claimName: lptrn-coreapi-pvc\n#     - name: lptrn\n#       persistentVolumeClaim:\n#         claimName: lptrn\n#     - name: lptrn-data\n#       persistentVolumeClaim:\n#         claimName: lptrn-data        \n#   volumeMounts:\n#     - mountPath: \"lpusr/lpapi/Logs\"\n#       name: lptrn-logs\n#     - mountPath: \"lpusr/lpapi/lptrn\"\n#       name: lptrn\n#     - mountPath: \"lpusr/lpapi/lptrn-data\"\n#       name: lptrn-data           \n\ningress:\n  hosts:\n    - host: lptrn.v10.leasepoint.aero\n      paths:\n        - path: /core(/|$)(.*)\n          pathType: Prefix\n          \n  tls:\n  - hosts:\n    - lptrn.v10.leasepoint.aero\n    secretName: aks-ingress-tls\n    \n\n"
+            ],
+            "verify": false,
+            "version": "0.1.0",
+            "wait": true,
+            "wait_for_jobs": false
+          },
+          "sensitive_attributes": [],
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.aksdata",
+            "data.azurerm_storage_account.akslogs",
+            "kubernetes_persistent_volume.logspv",
+            "kubernetes_persistent_volume.pv",
+            "kubernetes_persistent_volume_claim.logspvc",
+            "kubernetes_persistent_volume_claim.pvc",
+            "kubernetes_secret.azure-lpdev-tnt-docshare",
+            "kubernetes_secret.logfile_share"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.nginx-controller",
+      "mode": "managed",
+      "type": "helm_release",
+      "name": "application",
+      "provider": "provider[\"registry.terraform.io/hashicorp/helm\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "atomic": true,
+            "chart": "../helm/ingress-nginx-controller-v1.9.4/charts/ingress-nginx",
+            "cleanup_on_fail": false,
+            "create_namespace": true,
+            "dependency_update": false,
+            "description": null,
+            "devel": null,
+            "disable_crd_hooks": false,
+            "disable_openapi_validation": false,
+            "disable_webhooks": false,
+            "force_update": false,
+            "id": "ingress-nginx",
+            "keyring": null,
+            "lint": false,
+            "manifest": null,
+            "max_history": 0,
+            "metadata": [
+              {
+                "app_version": "1.9.4",
+                "chart": "ingress-nginx",
+                "name": "ingress-nginx",
+                "namespace": "ingress",
+                "revision": 1,
+                "values": "{\"controller\":{\"admissionWebhooks\":{\"patch\":{\"image\":{\"digest\":\"\"},\"nodeSelectorkubernetes.io//os\":\"linux\"}},\"image\":{\"digest\":\"\"},\"replicaCount\":2,\"service\":{\"annotations\":{\"service.beta.kubernetes.io/azure-load-balancer-health-probe-request-path\":\"/healthz\",\"service.beta.kubernetes.io/azure-load-balancer-internal\":true}}}}",
+                "version": "4.8.3"
+              }
+            ],
+            "name": "ingress-nginx",
+            "namespace": "ingress",
+            "pass_credentials": false,
+            "postrender": [],
+            "recreate_pods": false,
+            "render_subchart_notes": true,
+            "replace": false,
+            "repository": null,
+            "repository_ca_file": null,
+            "repository_cert_file": null,
+            "repository_key_file": null,
+            "repository_password": null,
+            "repository_username": null,
+            "reset_values": false,
+            "reuse_values": false,
+            "set": [
+              {
+                "name": "controller.admissionWebhooks.patch.image.digest",
+                "type": "",
+                "value": ""
+              },
+              {
+                "name": "controller.admissionWebhooks.patch.nodeSelector\\kubernetes\\.io//os",
+                "type": "",
+                "value": "linux"
+              },
+              {
+                "name": "controller.image.digest",
+                "type": "",
+                "value": ""
+              },
+              {
+                "name": "controller.replicaCount",
+                "type": "",
+                "value": "2"
+              },
+              {
+                "name": "controller.service.annotations.service\\.beta\\.kubernetes\\.io/azure-load-balancer-health-probe-request-path",
+                "type": "",
+                "value": "/healthz"
+              },
+              {
+                "name": "controller.service.annotations.service\\.beta\\.kubernetes\\.io/azure-load-balancer-internal",
+                "type": "",
+                "value": "true"
+              }
+            ],
+            "set_list": [],
+            "set_sensitive": [],
+            "skip_crds": false,
+            "status": "deployed",
+            "timeout": 300,
+            "values": null,
+            "verify": false,
+            "version": "4.8.3",
+            "wait": true,
+            "wait_for_jobs": false
+          },
+          "sensitive_attributes": [],
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ==",
+          "dependencies": [
+            "data.azurerm_storage_account.aksdata",
+            "data.azurerm_storage_account.akslogs",
+            "kubernetes_persistent_volume.logspv",
+            "kubernetes_persistent_volume.pv",
+            "kubernetes_persistent_volume_claim.logspvc",
+            "kubernetes_persistent_volume_claim.pvc",
+            "kubernetes_secret.azure-lpdev-tnt-docshare",
+            "kubernetes_secret.logfile_share"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
