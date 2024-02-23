@@ -13,7 +13,7 @@ values = [
 ]
 
 dynamic "set" {
-  for_each = local.volumes
+  for_each = local.logvolumes
   content {
     name = set.key
     value = set.value

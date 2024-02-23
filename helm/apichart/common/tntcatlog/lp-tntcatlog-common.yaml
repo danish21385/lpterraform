@@ -12,6 +12,9 @@ service:
   enabled: true
   port: 8080
   enableHttps: true
+  env:
+  - name: ConnectionStrings
+    value: db-env-dev 
 
 configmap:
   enabled: true
@@ -88,12 +91,6 @@ probes:
     failureThreshold: 5
   terminationMessagePath: /dev/termination-log
   terminationMessagePolicy: File
-
-service:
-  env:
-    - name: ConnectionStrings
-      value: db-env-dev  
-
 
       
 secretProviderClass:

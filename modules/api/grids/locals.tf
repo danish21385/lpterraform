@@ -1,5 +1,5 @@
 locals {
-  volumes = {
+  logvolumes = {
     "deployment.volumes[0].name"                            = "lp-logs"
     "deployment.volumes[0].persistentVolumeClaim.claimName" = "${var.namespace}gridsapi-logs"
     "deployment.volumeMounts[0].mountPath"                  = "lpusr/lpapi/Logs"

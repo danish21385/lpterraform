@@ -14,7 +14,7 @@ values = [
 
 
 dynamic "set" {
-  for_each = local.volumes
+  for_each = local.logvolumes
   content {
     name = set.key
     value = set.value
@@ -59,6 +59,12 @@ set {
     name  = "configmap.configuration.BaseAddress"
     value = "http://lp-tntcatlogapi-service.${var.namespace}.svc.cluster.local:8080/api/accounts"
   }
+
+  set {
+    name  = "configmap.configuration.TokenHistoryAddress"
+    value = "http://lp-tntcatlogapi-service.${var.namespace}.svc.cluster.local:8080/api/TokenHistory"
+  }
+
 
 
 }

@@ -47,12 +47,48 @@ set {
 
 
 dynamic "set" {
-  for_each = local.volumes
+  for_each = local.logvolumes
   content {
     name = set.key
     value = set.value
   }
 }
+
+
+
+dynamic "set" {
+    for_each = var.volume_config
+    content {
+      name  = "deployment.volumes[${set.key + 1}].name"
+      value = set.value.volume_name
+    }
+  }
+
+  dynamic "set" {
+    for_each = var.volume_config
+    content {
+      name  = "deployment.volumes[${set.key + 1}].persistentVolumeClaim.claimName"
+      value = set.value.claim_name
+    }
+  }
+
+  dynamic "set" {
+    for_each = var.volume_config
+    content {
+      name  = "deployment.volumeMounts[${set.key + 1}].mountPath"
+      value = set.value.mount_path
+    }
+  }
+
+  dynamic "set" {
+    for_each = var.volume_config
+    content {
+      name  = "deployment.volumeMounts[${set.key + 1}].name"
+      value = set.value.volume_mount_name
+    }
+  }
+
+
 
 dynamic "set" {
   for_each = local.ingress

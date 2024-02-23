@@ -1,24 +1,28 @@
-variable "name" {
-    
-}
 
 variable "helm_chart" {
   default = "../helm/apichart"
 }
 
-variable "namespace" {
-  
-}
+variable "name" {}
+variable "namespace" {}
 variable "environment" {}
 variable "registry_server" {}
 variable "app_image" {}
 variable "api_ingress_host" {}
-variable "app_ingress_host" {
-  # type = map(string)
+variable "ingress_secret" {}
+
+variable "ingress_config" {
+  type = list(object({
+    host       = string
+    path       = string
+    pathType   = string
+    tls_host   = string
+    tls_secret = string
+  }))
 
 }
 
-variable "ingress_secret" {}
+
 
 variable "atomic" {
   default = true

@@ -1,8 +1,7 @@
+#volume-data
 
 
-resource "kubernetes_persistent_volume" "data-pv" {
-  
-
+resource "kubernetes_persistent_volume" "client-data-pv" {
 
   metadata {
     name = "${var.client_name}-data"
@@ -21,7 +20,7 @@ resource "kubernetes_persistent_volume" "data-pv" {
 
     persistent_volume_source {
       azure_file {
-        secret_name = "azure-${var.client_name}-tnt-docshare"   #var.data_secret_name
+        secret_name = "azure-${var.client_name}-tnt-docshare"
         share_name  = "${var.client_name}-data"
         read_only   = false
       }
@@ -40,10 +39,8 @@ resource "kubernetes_persistent_volume" "data-pv" {
   }
 }
 
-resource "kubernetes_persistent_volume_claim" "data-pvcs" {
+resource "kubernetes_persistent_volume_claim" "client-data-pvc" {
   
-
-
   metadata {
     name      = "${var.client_name}-data"
     namespace = var.namespace
@@ -65,11 +62,9 @@ resource "kubernetes_persistent_volume_claim" "data-pvcs" {
   }
 }
 
+###############
 
-
-resource "kubernetes_persistent_volume" "pv" {
-  
-
+resource "kubernetes_persistent_volume" "client-pv" {
 
   metadata {
     name = var.client_name
@@ -102,14 +97,12 @@ resource "kubernetes_persistent_volume" "pv" {
       "nobrl",
     ]
     storage_class_name = "azurefile"
-    # persistent_volume_reclaim_policy = "Delete"
+    
   }
 }
 
-resource "kubernetes_persistent_volume_claim" "pvc" {
+resource "kubernetes_persistent_volume_claim" "client-pvc" {
   
-
-
   metadata {
     name      = var.client_name
     namespace = var.namespace
@@ -130,5 +123,3 @@ resource "kubernetes_persistent_volume_claim" "pvc" {
     }
   }
 }
-
-

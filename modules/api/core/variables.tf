@@ -1,5 +1,5 @@
 variable "name" {
-   
+
 }
 
 variable "helm_chart" {
@@ -7,13 +7,21 @@ variable "helm_chart" {
 }
 
 variable "namespace" {}
-variable "client_name" {}
 variable "environment" {}
 variable "registry_server" {}
 variable "coreapi_image" {}
 variable "api_ingress_host" {}
 variable "ingress_secret" {}
+variable "volume_config" {
+  type = list(object({
+    volume_mount_name = string
+    mount_path        = string
+    volume_name       = string
+    claim_name        = string
 
+  }))
+
+}
 variable "atomic" {
   default = true
 }

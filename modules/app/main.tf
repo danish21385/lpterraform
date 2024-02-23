@@ -14,13 +14,49 @@ values = [
 ]
 
 dynamic "set" {
-    for_each = local.ingress_config
-    content {
-      name  = set.key
-      value = set.value
-    }
-  }
+  for_each = var.ingress_config
 
+  content {
+    name  = "ingress.hosts[${set.key}].host"
+    value = set.value.host
+  }
+}
+
+dynamic "set" {
+  for_each = var.ingress_config
+
+  content {
+    name  = "ingress.hosts[${set.key}].paths[0].path"
+    value = set.value.path
+  }
+}
+
+dynamic "set" {
+  for_each = var.ingress_config
+
+  content {
+    name  = "ingress.hosts[${set.key}].paths[0].pathType"
+    value = set.value.pathType
+  }
+}
+
+dynamic "set" {
+  for_each = var.ingress_config
+
+  content {
+    name  = "ingress.tls[${set.key}].hosts[0]"
+    value = set.value.tls_host
+  }
+}
+
+dynamic "set" {
+  for_each = var.ingress_config
+
+  content {
+    name  = "ingress.tls[${set.key}].secretName"
+    value = set.value.tls_secret
+  }
+}
 
 
 dynamic "set" {
