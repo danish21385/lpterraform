@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define variables for ACR1 and ACR2
-ACR1="lpacrdev.azurecr.io"
-ACR2="lpacrtrn.azurecr.io"
+ACR1="acrdev.azurecr.io"
+ACR2="acrtrn.azurecr.io"
 IMAGE_NAME="$1"
 TAG="$2"
 
